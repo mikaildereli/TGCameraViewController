@@ -90,7 +90,7 @@
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 #endif
 {
-    return UIInterfaceOrientationMaskLandscapeRight ;
+    return UIInterfaceOrientationMaskAll ;
 }
 
 #pragma mark -
