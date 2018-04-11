@@ -90,7 +90,7 @@
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 #endif
 {
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAll ;
 }
 
 #pragma mark -
