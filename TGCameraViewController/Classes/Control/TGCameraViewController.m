@@ -253,6 +253,9 @@
     
     UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
     AVCaptureVideoOrientation videoOrientation = [self videoOrientationForDeviceOrientation:deviceOrientation];
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
+    }
     
     CGSize cropSize;
     if ([[TGCamera getOption:kTGCameraOptionUseOriginalAspect] boolValue] == YES) {
