@@ -254,7 +254,7 @@
     UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
     AVCaptureVideoOrientation videoOrientation = [self videoOrientationForDeviceOrientation:deviceOrientation];
     if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
+        videoOrientation = [[UIDevice currentDevice] orientation];
     }
     
     CGSize cropSize;

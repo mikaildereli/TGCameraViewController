@@ -111,7 +111,7 @@ NSMutableDictionary *optionDictionary;
 {
     _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_session];
     _previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    AVCaptureVideoOrientation orientation = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? AVCaptureVideoOrientationLandscapeLeft : AVCaptureVideoOrientationPortrait;
+     AVCaptureVideoOrientation orientation = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? [[UIDevice currentDevice] orientation] : AVCaptureVideoOrientationPortrait;
     [[_previewLayer connection] setVideoOrientation:orientation];
     CALayer *rootLayer = [rootView layer];
     rootLayer.masksToBounds = YES;
